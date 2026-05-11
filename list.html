@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-Emerald Classmates System</title>
+
+	<!-- Standard favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="favicon-128x128.png">
+
+    <!-- High-resolution favicon for Retina & Mobile -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Pyscript Core -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
+
+<style>
+    	 :root {
+            --gold: #ffd700;
+            --accent-pink: #ff69b4;
+        }
+         body {
+            background-image: linear-gradient(to right, #ffdddd, #ddddff, #ddffdd, #ffffdd);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #083980;
+            width: 100vw;
+            height: 120px;
+            position: relative;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        header a.logo-link {
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+        }
+        header a.logo-link img {
+            height: 120px;
+            width: auto;
+            object-fit: contain;
+        }
+        header h1 {
+            color: white;
+            font-family: "Gill Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+            max-width: 60%;
+        }
+        header .navbar {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        header .nav-link {
+            color: white !important;
+            font-weight: bold;
+            padding: 0.5rem 1rem !important;
+            font-size: 0.95rem;
+        }
+        header .nav-link:hover {
+            color: var(--gold) !important;
+        }
+
+        header .nav-link.active {
+            color: var(--accent-pink) !important;
+            border-bottom: 2px solid var(--accent-pink);
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+         .footer {
+            font-family: "Gill Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            color: white;
+            background-color: rgba(8, 57, 128, 0.85);
+            padding: 20px;
+            width: 100%;
+            margin-top: auto;
+        }
+         .footer a {
+            color: white;
+            text-decoration: underline;
+        }
+         .footer-title {
+         	font-weight: bold;
+         	margin-bottom: 10px;
+         }
+
+         /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+            header a.logo-link {
+                position: static;
+                transform: none;
+                margin-bottom: 10px;
+            }
+            header .navbar {
+                position: static;
+                transform: none;
+                margin-top: 10px;
+            }
+            header h1 {
+                font-size: 1.1rem;
+                max-width: 100%;
+            }
+        }
+</style>
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<header>
+	<a href="index.html" class="logo-link">
+		<img src="OBMC Logo.jpg" alt="OBMC Logo">
+	</a>
+
+	<h1>📖 10-Emerald Classmates System</h1>
+
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item">
+					<a class="nav-link active" href="list.html">Classmates List</a>
+				</li>
+			</ul>
+            <ul class="navbar-nav ms-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="tracker.html">Attendance Tracker</a>
+				</li>
+			</ul>
+            <ul class="navbar-nav ms-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Gallery</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+</header>
+
+<div class="container mt-3">
+
+	<!-- Title -->
+	<div class="text-center">
+		<h2 class="fw-bold display-4"><i class="fa-solid fa-clipboard-list"></i>Classmates System</h2>
+		<p class="text-muted fs-4">Add and view your classmates easily.</p>
+	</div>
+
+	<!-- Card Form -->
+	<div class="card shadow p-4">
+		<div class="mb-3">
+			<input type="text" id="classmate1" class="form-control" placeholder="Enter classmate name">
+		</div>
+
+		<div class="mb-3">
+			<input type="text" id="section" class="form-control" placeholder="Enter section">
+		</div>
+
+		<div class="mb-3">
+			<input type="text" id="subject" class="form-control" placeholder="Enter favorite subject">
+		</div>
+
+
+        <div class="mb-3">
+            <label class="form-label">Enter your birthstone:</label>
+
+            <select id="birthstone" class="form-select">
+                <option value="Garnet">January - Garnet</option>
+                <option value="Amethyst">February - Amethyst</option>
+                <option value="Aquamarine/Bloodstone">March - Aquamarine/Bloodstone</option>
+                <option value="Diamond">April - Diamond</option>
+                <option value="Emerald">May - Emerald</option>
+                <option value="Pearl/Moonstone/Alexandrite">June - Pearl/Moonstone/Alexandrite</option>
+                <option value="Ruby">July -Ruby</option>
+                <option value="Peridot/Spinel/Sardonyx">August - Peridot/Spinel/Sardonyx</option>
+                <option value="Sapphire">September - Sapphire</option>
+                <option value="Opal/Tourmaline">October - Opal/Tourmaline</option>
+                <option value="Citrine/Topaz">November - Citrine/Topaz</option>
+                <option value="Turquoise/Tanzanite/Zircon">December - Turquoise/Tanzanite/Zircon</option>
+            </select>
+        </div>
+
+		<div class="d-flex gap-2">
+			<input type="button" py-click="add_classmate" class="btn btn-primary w-50" value="Add Classmate">
+			<input type="button" py-click="show_classmates" class="btn btn-success w-50" value="Show List">
+		</div>
+
+		<div class="mb-2 mt-4">
+			<input type="text" id="search" class="form-control" placeholder="Search classmate by name">
+		</div>
+
+		<div>
+			<input type="button" py-click="search_classmates" class="btn btn-warning w-100" value="Search">
+		</div>
+	</div>
+	<div class="card shadow mt-4 p-3 mb-5">
+		<h5 class="fw-bold">📋 Classmate List</h5>
+		<div id="output" class="mt-2"></div>
+	</div>
+
+</div>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="footer-title">Operation Brotherhood Montessori Center</h3>
+                    <p><b>Address:</b> 3 Eisenhower St., Bgy. Greenhills,<br>San Juan City, Metro Manila, Philippines<br><b>Phone:</b> +63 2 8722 9720 to 26<br><b>Email:</b> info@obmontessori.edu.ph</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer-title"><i class="fa-regular fa-copyright"></i> 2025-2026 10-Emerald. All rights reserved.</h3>
+                    <br>
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="https://storage.googleapis.com/oa_disk001/obstaana/66/documents/1759818558-2627.pdf" class="footer-link" target="_blank">OBMC Parent & Student Handbook October 2025 Edition</a></li>
+                        <li><a href="https://obmontessori.edu.ph/greenhills-admissions" class="footer-link" target="_blank">OBMC Admissions</a></li>
+                        <li><a href="https://obmontessori.orangeapps.ph/landing/obmontessori/" class="footer-link" target="_blank">OBMC Portal</a></li>
+                        <li><a href="https://obmontessoristaana.orangeapps.ph/oa_school/calendar" class="footer-link" target="_blank">OBMC Calendar</a></li>
+                        <li><a href="https://obmstaanasis.orangeapps.ph/ob/login" class="footer-link" target="_blank">OBMC SIS (School Information System)</a></li>
+                        <li><a href="https://obmontessoristaana.orangeapps.ph/oa_school/" class="footer-link" target="_blank">OBMC DP (Digital Platform)</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer-title">Connect With Us</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/obmcofficial/" class="footer-link" target="_blank"><i class="fab fa-facebook"></i>Facebook</a></li>
+                        <li><a href="https://www.instagram.com/obmontessoriofficial/?igsh=MXM5YWI5bzAzcHE3aw%3D%3D#" class="footer-link" target="_blank"><i class="fab fa-instagram"></i>Instagram</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCqfx_-uvSz9wJvyQj6KvGFQ" class="footer-link" target="_blank"><i class="fab fa-youtube"></i>Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+<py-script src="main.py"></py-script>
+
+</body>
+</html>
