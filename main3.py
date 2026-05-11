@@ -4,11 +4,11 @@ from pyscript import document
 activities = [
     {"img": "10-Emerald Class Photos.jpg", "caption": "10-Emerald's Group Pictures"},
     {"img": "Food Fair & Minimart.jpg", "caption": "A school-wide fundraising initative and a day for delicious food, beverages, fresh products, and more, all the while supporting a great cause!"},
-    {"img": "Christmas Party.jpg", "caption": "A joyful celebration with the holiday spirit held during the holiday season."},
+    {"img": "Christmas Party.JPG", "caption": "A joyful celebration with the holiday spirit held during the holiday season."},
     {"img": "LTCAT.jpeg", "caption": "Leadership Development, Citizenship, Discipline, Teamwork, Character Development, and Public Service."},
     {"img": "Project Hiraya.png", "caption": "10-Emerald Group#1's Peace Project. An initiative project to help focus on inspiring hope, creativity, and positive change within communities especially the youth."},
     {"img": "Lakad Ligtas.png", "caption": "10-Emerald Group#2's Peace Project. An initative project that promotes pedestrian safety, responsible road use, and safer public spaces for everyone."},
-    {"img": "Intrams.jpg", "caption": "OBMC High School Intramurals serves as a practical application of the skills learned in P.E. Class. Develop sportsmanship and teamwork among students. Boost physical stamina. Strengthens self-discipline and determination."},
+    {"img": "Intrams.JPG", "caption": "OBMC High School Intramurals serves as a practical application of the skills learned in P.E. Class. Develop sportsmanship and teamwork among students. Boost physical stamina. Strengthens self-discipline and determination."},
     {"img": "CAT Graduation.jpeg", "caption": "Graduating from C.A.T."}
 ]
 
